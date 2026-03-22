@@ -1,49 +1,82 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Лендинг</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        section {
-            padding: 60px 20px;
-            text-align: center;
-        }
+<title>Создание сайтов под ключ</title>
+<meta name="description" content="Разработка современных сайтов под ключ. Быстро, удобно, адаптивно.">
 
-        .hero {
-            background: #f5f5f5;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: black;
-            color: white;
-            text-decoration: none;
-            margin-top: 20px;
-        }
+section {
+    padding: 60px 20px;
+}
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-        }
-    </style>
+h1, h2 {
+    text-align: center;
+}
+
+.hero {
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1 1 30%;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* адаптив */
+@media (max-width: 768px) {
+    .grid {
+        flex-direction: column;
+    }
+}
+</style>
 </head>
+
 <body>
 
-<!-- Первый экран -->
 <section class="hero">
     <div class="container">
         <h1>Создание сайтов под ключ</h1>
@@ -52,50 +85,59 @@
     </div>
 </section>
 
-<!-- О специалисте -->
 <section>
     <div class="container">
         <h2>О специалисте</h2>
-        <p>Краткое описание: кто вы, чем занимаетесь, опыт.</p>
+        <p>Я занимаюсь разработкой сайтов с упором на простоту и удобство. Помогаю бизнесу получать клиентов через интернет.</p>
     </div>
 </section>
 
-<!-- Услуги -->
 <section>
     <div class="container">
         <h2>Услуги</h2>
-        <p>Создание сайтов, доработка, поддержка.</p>
+        <div class="grid">
+            <div class="card">Лендинги</div>
+            <div class="card">Доработка сайтов</div>
+            <div class="card">Поддержка</div>
+        </div>
     </div>
 </section>
 
-<!-- Преимущества -->
 <section>
     <div class="container">
-        <h2>Почему выбирают нас</h2>
-        <p>Быстро, качественно, без лишней сложности.</p>
+        <h2>Почему выбирают меня</h2>
+        <div class="grid">
+            <div class="card">Быстро</div>
+            <div class="card">Чистый код</div>
+            <div class="card">Адаптивность</div>
+        </div>
     </div>
 </section>
 
-<!-- Отзывы -->
 <section>
     <div class="container">
         <h2>Отзывы</h2>
-        <p>Тут будут отзывы клиентов.</p>
+        <p>“Отличная работа, всё сделано быстро!”</p>
     </div>
 </section>
 
-<!-- Форма -->
 <section id="contact">
     <div class="container">
         <h2>Оставить заявку</h2>
-        <form>
-            <input type="text" placeholder="Ваше имя">
-            <input type="email" placeholder="Email">
-            <textarea placeholder="Сообщение"></textarea>
+
+        <form action="https://formspree.io/f/xvzwjolz" method="POST">
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Сообщение" required></textarea>
             <button class="btn">Отправить</button>
         </form>
+
     </div>
 </section>
+
+<footer>
+    <p>Контакты: example@mail.com | +7 999 999-99-99</p>
+</footer>
 
 </body>
 </html>
